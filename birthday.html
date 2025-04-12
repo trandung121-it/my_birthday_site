@@ -9,6 +9,9 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
+  <audio id="birthday-audio" loop>
+    <source src="audio/baby.mp3" type="audio/mpeg">
+  </audio>
   <div id="main-content">
     <h1>🎉 Happy Birthday 🎉</h1>
     <img src="images/naaaaaa.jpg" alt="Birthday Person" class="person-pic" />
@@ -28,5 +31,14 @@
       confetti();
     });
   </script>
+  <script>
+    window.addEventListener('load', () => {
+      const audio = document.getElementById('birthday-audio');
+      audio.play().catch((e) => {
+        console.log('Tự động phát bị chặn, cần người dùng tương tác.');
+      });
+    });
+  </script>
+  
 </body>
 </html>
