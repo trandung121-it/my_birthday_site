@@ -32,13 +32,15 @@
     });
   </script>
   <script>
-    window.addEventListener('load', () => {
-      const audio = document.getElementById('birthday-audio');
-      audio.play().catch((e) => {
-        console.log('Tự động phát bị chặn, cần người dùng tương tác.');
-      });
+    const audio = document.getElementById('birthday-audio');
+  
+    document.getElementById('show-card-btn').addEventListener('click', () => {
+      document.getElementById('greeting-card').classList.remove('hidden');
+      confetti();
+      audio.play(); // Play nhạc khi người dùng click
     });
   </script>
+  
   
 </body>
 </html>
