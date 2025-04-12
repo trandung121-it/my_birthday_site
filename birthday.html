@@ -37,9 +37,14 @@
     document.getElementById('show-card-btn').addEventListener('click', () => {
       document.getElementById('greeting-card').classList.remove('hidden');
       confetti();
-      audio.play(); // Play nhạc khi người dùng click
+      
+      // Phát nhạc ngay khi click nút
+      audio.play().catch(error => {
+        console.log('Không thể phát nhạc: ', error);
+      });
     });
   </script>
+  
   
   
 </body>
