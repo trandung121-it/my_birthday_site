@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Thêm thư viện Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <div id="main-content">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <img src="images/Na.jpg" alt="Birthday Person" class="person-pic" />
+    <div class="icons">🎂🎂🎂🎂🎂🎂🎂</div>
+
+    <button id="show-card-btn">Xem Thiệp Chúc Mừng</button>
+
+    <div id="greeting-card" class="hidden">
+      <p>Chúc mừng sinh nhật nàng! Mong rằng hôm nay sẽ là một ngày thật tuyệt vời, đầy niềm vui và những khoảnh khắc đáng nhớ. Chúc Na luôn khỏe mạnh, hạnh phúc và đạt được tất cả những điều mình mong muốn. Hy vọng tủi mới sẽ mang lại cho em nhiều thành công và những điều thú vị. At all, cảm ơn em vì đã làm cho cuộc sống xung quanh tui thêm phần rực rỡ. Chúc em một sinh nhật thật vui vẻ và đáng nhớ nhé! 💖</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('show-card-btn').addEventListener('click', () => {
+      document.getElementById('greeting-card').classList.remove('hidden');
+      // Bắt đầu hiệu ứng pháo
+      confetti();
+    });
+  </script>
+</body>
+</html>
